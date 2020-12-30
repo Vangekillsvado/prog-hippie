@@ -8,7 +8,7 @@ def compare(guess, number):
     return 0
 
 def factors(number):
-  i = 1
+  i = 2
   while i < 25:
     if number % i == 0:
       fac = str(i)

@@ -17,4 +17,7 @@ while True:
         break
     else:
         ##theHint = stuff.hint
-        print(stuff.hints(guess, windex))
+        print(stuff.hints(g, windex))
+        guess = input("Enter a number")
+        g = int(guess)
+
