@@ -1,27 +1,16 @@
 import random
-n = random.randint(0,22)
-guess = input("Enter a number")
-pog = str(n)
-print (guess + ", " + pog)
 import stuff
 import hint 
+
 n = random.randint(0,22)
-
-pog = str(n)
-
-windex = 0
-theNum = "The number is "
-guess = input("Enter a number")
+guess = input("Guess a number between 0 and 22: ")
 g = int(guess)
-print (guess + ", " + pog)
-ans = stuff.compare(g, n)
-while True:
-    if ans == 0:
-        print("Congrats")
-        break
-    else:
-        ##theHint = stuff.hint
-        print(stuff.hints(g, windex))
-        guess = input("Enter a number")
-        g = int(guess)
 
+numTrys = 0
+while stuff.compare(g, n) != 0:
+    print(stuff.hints(g, numTrys))
+    guess = input("Try again: ")
+    g = int(guess)
+    numTrys += 1
+
+print ("Congrats")

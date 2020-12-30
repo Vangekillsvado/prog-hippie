@@ -11,10 +11,10 @@ def factors(number):
   i = 2
   while i < 25:
     if number % i == 0:
-      fac = str(i)
+      fac = "factor of " + str(i)
       return fac
   i = i+1
-  return "prime"
+  return "prime number"
 
 def binaryHint(theNum, guess):
   ans = compare(guess, theNum)
@@ -33,13 +33,10 @@ def binaryHint(theNum, guess):
 
 
 def hints(number, index):
-  h = []
-  
-  if factors(number) == "prime":
-    h.append("The number is a prime number.")
+  if index == 0:
+    return factors(number)
   else:
-    h.append("The number is divisible by " + factors(number))
-  return h[index]  
+    return "dont have that yet"  
 
 
 
